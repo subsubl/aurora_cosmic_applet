@@ -23,20 +23,32 @@ Ensure you have the following installed on your system:
   sudo apt install libssl-dev libwayland-dev libxkbcommon-dev pkg-config
   ```
 
-## Installation & Usage
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/subsubl/aurora_cosmic_applet.git
-   cd aurora_cosmic_applet
-   ```
+## System Installation (for Panel Integration)
 
-2. **Run the applet**:
-   ```bash
-   cargo run
-   ```
+To make the applet appear in the COSMIC Panel "Add Applet" list:
 
-   *Note: On the first run, it may take a few seconds to download the initial data sets.*
+1.  **Build the release binary**:
+    ```bash
+    cargo build --release
+    ```
+
+2.  **Install the binary**:
+    ```bash
+    sudo cp target/release/aurora_cosmic_applet /usr/local/bin/
+    ```
+
+3.  **Install the desktop entry**:
+    ```bash
+    mkdir -p ~/.local/share/applications
+    cp com.user.AuroraApplet.desktop ~/.local/share/applications/
+    ```
+
+4.  **Add to Panel**:
+    - Right-click the COSMIC Panel.
+    - Select "Configure Panel".
+    - Click "Add Applet".
+    - Select "Aurora Forecast" from the list.
 
 ## How it Works
 

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Aurora Forecast
+Comment=Monitor Aurora Borealis Kp index
+Type=Application
+Icon=weather-clear-night
+Exec=aurora_cosmic_applet
+Terminal=false
+StartupNotify=true
+Categories=COSMIC;Utility;
+Keywords=COSMIC;Aurora;Weather;
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto
