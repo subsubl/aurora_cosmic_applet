@@ -51,6 +51,7 @@ modules:
       - install -D com.user.AuroraApplet.metainfo.xml /app/share/metainfo/com.user.AuroraApplet.metainfo.xml
       - install -D icons/icon.svg /app/share/icons/hicolor/scalable/apps/com.user.AuroraApplet.svg
     sources:
-      - type: dir
-        path: .
+      - type: git
+        url: https://github.com/subsubl/aurora_cosmic_applet.git
+        branch: master
       - cargo-sources.json
