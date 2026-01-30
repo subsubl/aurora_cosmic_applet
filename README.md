@@ -60,6 +60,18 @@ To make the applet appear in the COSMIC Panel "Add Applet" list:
 - **Parsing**: It parses the text-based 3-day forecast to determine the maximum Kp index for the current time block (logic adapted from standard NOAA parsing scripts).
 - **Caching**: Images and data are cached in `~/.cache/` (e.g., `~/.cache/aurora.txt`, `~/.cache/aurora.png`).
 
+## Publishing to COSMIC Store
+
+To publish this applet to the COSMIC Store, it must be packaged as a Flatpak and submitted to Flathub.
+
+1.  **Metadata**: A `com.user.AuroraApplet.metainfo.xml` file has been created with the necessary app details.
+2.  **Manifest**: A `com.user.AuroraApplet.yml` manifest is provided as a starting point.
+3.  **Next Steps**:
+    - Install `flatpak-builder` and `flatpak-builder-tools`.
+    - Generate the cargo sources: `python3 flatpak-cargo-generator.py Cargo.lock -o cargo-sources.json`.
+    - Update the manifest to include `cargo-sources.json`.
+    - Submit a PR to [Flathub](https://github.com/flathub/flathub).
+
 ## License
 
 [MIT](LICENSE)
