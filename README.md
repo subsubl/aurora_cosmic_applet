@@ -21,7 +21,7 @@ A native Rust applet for the [COSMIC Desktop Environment](https://github.com/pop
 Ensure you have the following installed on your system:
 
 - **Rust** (Stable)
-- **mpv** (for viewing images)
+- **mpv** (for viewing images): `sudo apt install mpv`
 - **System Dependencies** (for `libcosmic`):
   ```bash
   sudo apt install libssl-dev libwayland-dev libxkbcommon-dev pkg-config
