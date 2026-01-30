@@ -53,7 +53,4 @@ modules:
     sources:
       - type: dir
         path: .
-      # NOTE: You MUST generate the cargo sources to bundle dependencies.
-      # Use: flatpak-builder-tools/cargo/flatpak-cargo-generator.py Cargo.lock -o cargo-sources.json
-      # Then include: 
-      # - cargo-sources.json
+      - cargo-sources.json
