@@ -1,0 +1,19 @@
+[package]
+name = "aurora_cosmic_applet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cosmic = { git = "https://github.com/pop-os/libcosmic", branch = "master", package = "libcosmic", features = ["applet"] }
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+image = "0.24"
+directories = "5.0"
+chrono = "0.4"
+open = "5.0"
+notify-rust = "4.0"
+regex = "1"
+log = "0.4.29"
+env_logger = "0.11.8"
