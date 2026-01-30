@@ -111,12 +111,17 @@ impl cosmic::Application for AuroraApplet {
                      let latest = format!("{}/aurora_latest.jpg", cache);
                      let kindex = format!("{}/aurora_kindex.png", cache);
                      
-                     let _ = StdCommand::new("mpv")
-                         .args(&["--title=Aurora", "--idle", "--autofit=50%", "--background=none", "--loop-playlist", "--image-display-duration=10"])
-                         .arg(viewline)
-                         .arg(latest)
-                         .arg(kindex)
-                         .spawn();
+                     match StdCommand::new("mpv")
+                         .args(&["--title=Aurora", "--idle", "--autofit=50%", "--loop-playlist", "--image-display-duration=10"])
+                         .arg(&viewline)
+                         .arg(&latest)
+                         .arg(&kindex)
+                         .spawn() {
+                             Ok(_) => log::info!("mpv spawned successfully"),
+                             Err(e) => log::error!("Failed to spawn mpv: {}", e),
+                         }
+                } else {
+                    log::error!("Failed to get HOME environment variable");
                 }
             }
             Message::ShowData => {
