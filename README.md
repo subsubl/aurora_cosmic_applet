@@ -10,7 +10,11 @@ A native Rust applet for the [COSMIC Desktop Environment](https://github.com/pop
 - **Visual Indicators**: Displays the Kp index with color-coded status (Green < 4, Orange < 7, Red >= 7).
 - **Desktop Notifications**: Sends a system notification whenever new forecast data is retrieved.
 - **Visualizations**: Downloads and combines the latest "viewline" and "ovation" images.
-- **Interactive**: Clicking the applet launches `mpv` to display a loop of the latest Aurora images.
+- **Interactive**: Clicking the applet opens a popup menu to:
+    - View the current Kp index.
+    - Open the image loop viewer.
+    - View raw forecast data.
+    - Manually refresh data.
 
 ## Prerequisites
 
